@@ -8,95 +8,122 @@ table.appendChild(tbody) // a tbodyt hozzáadom a tablehez
 
 
 //fejléc létrehozása
+const th1_ertek ='Fizika területe' // megadjuk a th1nek az értékét
+const th2_ertek ='Időszak' // megadjuk a th2nek az értékét
+const th3_ertek ='Képviselők' // megadjuk a th3nak az értékét
 
 const th_row = document.createElement('tr') // létrehozunk egy sort
 thead.appendChild(th_row) // a sort hozzáadjuk a theadhez
 
 const th1 = document.createElement('th') // létrehozunk egy th elemet
-th1.innerHTML= 'Fizika területe' // megadjuk a thnak a tartalmát
+th1.innerHTML= th1_ertek // megadjuk a thnak a tartalmát
 th_row.appendChild(th1) // a th1-et hozzáadjuk a sorhoz
 
 const th2 = document.createElement('th') // létrehozunk egy th elemet
-th2.innerHTML= 'Időszak' // megadjuk a thnak a tartalmát
- 
+th2.innerHTML= th2_ertek // megadjuk a thnak a tartalmát
 th_row.appendChild(th2) // a th2-t hozzáadjuk a sorhoz
 
 const th3 = document.createElement('th') // létrehozunk egy th elemet
-th3.innerHTML= 'Képviselők' // megadjuk a thnak a tartalmát
+th3.innerHTML= th3_ertek // megadjuk a thnak a tartalmát
 th3.colSpan= 2// a th2-nek beállítjuk a rowspan értékét 2-re
 th_row.appendChild(th3) // a th3-t hozzáadjuk a sorhoz
 
 
-//táblázat létrehozása
+//táblázat létrehozása, változok bevezetése
 const tb_row1 = document.createElement('tr') // létrehozunk egy sort
 tbody.appendChild(tb_row1) // a sort hozzáadjuk a tbodyhoz
 
+const td1_ertek ='Optika' // megadjuk a td1nek az értékét
+const td2_ertek ='XI.század' // megadjuk a td2nek az értékét
+const td3_ertek ='Alhazen' // megadjuk a td3nak az értékét
+
+
 const td1 = document.createElement('td') // létrehozunk egy td elemet
-td1.innerHTML= 'Optika' //megadjuk a tdnek a tartalmat
+td1.innerHTML= td1_ertek //megadjuk a tdnek a tartalmat
 tb_row1.appendChild(td1) // a td1-et hozzáadjuk a sorhoz
 
 const td2 = document.createElement('td') // létrehozunk egy td elemet
-td2.innerHTML= 'XI.század' //megadjuk a tdnek a tartalmat
+td2.innerHTML= td2_ertek //megadjuk a tdnek a tartalmat
 tb_row1.appendChild(td2) // a td2-t hozzáadjuk a sorhoz
 
 const td3 = document.createElement('td') // létrehozunk egy td elemet
-td3.innerHTML= 'Alhazen'//megadjuk a tdnek a tartalmat
+td3.innerHTML= td3_ertek //megadjuk a tdnek a tartalmat
 td3.colSpan =2  // a td3-nak beállítjuk a rowspan értékét 2-re
 tb_row1.appendChild(td3) // a td3-t hozzáadjuk a sorhoz
+
+
+const td4_ertek ='Asztronómia' // megadjuk a td4nek az értékét
+const td5_ertek ='reneszánsz' // megadjuk a td5nek az értékét
+const td6_ertek ='Galilei' // megadjuk a td6nak az értékét
+const td7_ertek ='Kepler' // megadjuk a td7nek az értékét
+
+
 
 const tb_row2 = document.createElement('tr') // létrehozunk egy sort
 tbody.appendChild(tb_row2) // a sort hozzáadjuk a tbodyhoz
 
 const td4 = document.createElement('td') // létrehozunk egy td elemet
-td4.innerHTML= 'Asztronómia' //megadjuk a tdnek a tartalmat
+td4.innerHTML= td4_ertek //megadjuk a tdnek a tartalmat
 tb_row2.appendChild(td4) // a td4-et hozzáadjuk a sorhoz
 
 const td5 = document.createElement('td') // létrehozunk egy td elemet
-td5.innerHTML= 'reneszánsz' //megadjuk a tdnek a tartalmat
+td5.innerHTML= td5_ertek //megadjuk a tdnek a tartalmat
 tb_row2.appendChild(td5) // a td5-t hozzáadjuk a sorhoz
 
 const td6 = document.createElement('td') // létrehozunk egy td elemet
-td6.innerHTML= 'Kepler' //megadjuk a tdnek a tartalmat
+td6.innerHTML=  td7_ertek //megadjuk a tdnek a tartalmat
 tb_row2.appendChild(td6) // a td6-t hozzáadjuk a sorhoz
 
 const td7 = document.createElement('td') // létrehozunk egy td elemet
-td7.innerHTML= 'Galilei' //megadjuk a tdnek a tartalmat
+td7.innerHTML= td6_ertek //megadjuk a tdnek a tartalmat
 tb_row2.appendChild(td7) // a td6-t hozzáadjuk a sorhoz
+
+
+const td8_ertek = 'Kvantumfizika' // megadjuk a td8nak az értékét
+const td9_ertek =  'XIX-XX. század' // megadjuk a td9nek az értékét
+const td10_ertek = 'Max Planck' // megadjuk a td10nek az értékét
+const td11_ertek = 'Albert Einstein' // megadjuk a td11nek az értékét
 
 const tb_row3 = document.createElement('tr') // létrehozunk egy sort
 tbody.appendChild(tb_row3) // a sort hozzáadjuk a tbodyhoz
 
 const td8 = document.createElement('td') // létrehozunk egy td elemet
-td8.innerHTML= 'Kvantumfizika' //megadjuk a tdnek a tartalmat
+td8.innerHTML= td8_ertek //megadjuk a tdnek a tartalmat
 tb_row3.appendChild(td8) // a td8-et hozzáadjuk a sorhoz
 
 const td9 = document.createElement('td') // létrehozunk egy td elemet
-td9.innerHTML= 'XIX-XX. század' //megadjuk a tdnek a tartalmat
+td9.innerHTML= td9_ertek //megadjuk a tdnek a tartalmat
 tb_row3.appendChild(td9) // a td9-t hozzáadjuk a sorhoz
 
 const td10 = document.createElement('td') // létrehozunk egy td elemet
-td10.innerHTML= 'Max Planck' //megadjuk a tdnek a tartalmat
+td10.innerHTML= td10_ertek //megadjuk a tdnek a tartalmat
 tb_row3.appendChild(td10) // a td10-et hozzáadjuk a sorhoz
 
 const td11 = document.createElement('td') // létrehozunk egy td elemet
-td11.innerHTML= 'Albert Einstein' //megadjuk a tdnek a tartalmat
+td11.innerHTML= td11_ertek //megadjuk a tdnek a tartalmat
 tb_row3.appendChild(td11) // a td11-et hozzáadjuk a sorhoz
+
+const td12_ertek = 'Modern fizika' // megadjuk a td12nek az értékét
+const td13_ertek = 'XX-XXI. század' // megadjuk a td13nak az értékét
+const td14_ertek = 'Richard Feynman' // megadjuk a td14nek az értékét
+const td15_ertek = 'Stephen Hawking' // megadjuk a td15nek az értékét
+
 
 const tb_row4 = document.createElement('tr') // létrehozunk egy sort
 tbody.appendChild(tb_row4) // a sort hozzáadjuk a tbodyhoz
 
 const td12 = document.createElement('td') // létrehozunk egy td elemet 
-td12.innerHTML= 'Modern fizika' //megadjuk a tdnek a tartalmat
+td12.innerHTML= td12_ertek //megadjuk a tdnek a tartalmat
 tb_row4.appendChild(td12) // a td12-et hozzáadjuk a sorhoz
 
 const td13 = document.createElement('td') // létrehozunk egy td elemet
-td13.innerHTML= 'XIX-XX. század' //megadjuk a tdnek a tartalmat
+td13.innerHTML= td13_ertek //megadjuk a tdnek a tartalmat
 tb_row4.appendChild(td13) // a td13-t hozzáadjuk a sorhoz
 
 const td14 = document.createElement('td') // létrehozunk egy td elemet
-td14.innerHTML= 'Richard Feynman' //megadjuk a tdnek a tartalmat
+td14.innerHTML= td14_ertek //megadjuk a tdnek a tartalmat
 tb_row4.appendChild(td14) // a td14-et hozzáadjuk a sorhoz
 
 const td15 = document.createElement('td') // létrehozunk egy td elemet
-td15.innerHTML= 'Stephen Hawking' //megadjuk a tdnek a tartalmat
+td15.innerHTML= td15_ertek //megadjuk a tdnek a tartalmat
 tb_row4.appendChild(td15) // a td15-et hozzáadjuk a sorhoz
