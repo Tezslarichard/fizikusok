@@ -1,0 +1,18 @@
+thead {
+    background-color: #9d3cc4; 
+   
+}
+tbody tr:nth-child(odd) {
+    background-color: #535bcc; 
+}
+tbody tr:nth-child(even) {
+    background-color: #e06b88; 
+}
+table {
+    
+    border-collapse: collapse;
+    text-align: center;
+}
+table,td, th {
+    border: 1px solid #000000;
+}
