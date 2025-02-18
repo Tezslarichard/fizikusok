@@ -64,6 +64,8 @@ th_row.appendChild(th3) // a th3-t hozzáadjuk a sorhoz
 
 function rendertable(){
 //táblázat létrehozása
+
+tbody.innerHTML= '' // a tbody tartalmát töröljük
 for(let futo of tablazat){ // végigmegyünk a tablazat tömb elemein
     const tr_row = document.createElement('tr') // létrehozunk egy sort
     tbody.appendChild(tr_row) // a sort hozzáadjuk a tbodyhoz
@@ -94,3 +96,39 @@ for(let futo of tablazat){ // végigmegyünk a tablazat tömb elemein
 }
 }
 rendertable()//meghuvjuk a függvényt
+
+
+
+const form = document.getElementById('form') // a formot elmentjük egy változóba
+
+
+form.addEventListener('submit', function(e){// a formra hozzáadunk egy eseményfigyelőt
+
+    e.preventDefault() //megakadályozzuk az alapértelmezett eseményt
+
+
+    const fizika_terulet = document.getElementById('fizika')// a fizika területet elmentjük egy változóba id alapján
+    const idoszak = document.getElementById('ido')// az időszakot elmentjük egy változóba id alapján
+    const tudosok1 = document.getElementById('tudos1')// a tudos1-et elmentjük egy változóba id alapján
+    const tudosok2 = document.getElementById('tudos2')//a tudos2-t elmentjük egy változóba id alapján
+
+
+
+    const fizika_terulet_value = fizika_terulet.value // a fizika terület értékét elmentjük egy változóba
+    const idoszak_value = idoszak.value // az időszak értékét elmentjük egy változóba
+    const tudosok1_value = tudosok1.value       // a tudos1 értékét elmentjük egy változóba
+    const tudosok2_value = tudosok2.value    // a tudos2 értékét elmentjük egy változóba
+
+
+
+    const uj_tablazat = { // létrehozunk egy objektumot
+        fizika : fizika_terulet_value, // a fizika terület értékét elmentjük egy változóba
+        ido : idoszak_value, // az időszak értékét elmentjük egy változóba
+        tudos1 : tudosok1_value, // a tudos1 értékét elmentjük egy változóba
+        tudos2 : tudosok2_value // a tudos2 értékét elmentjük egy változóba
+    }
+
+    tablazat.push(uj_tablazat) // az uj_tablazatot hozzáadjuk a tablazathoz
+    rendertable() // meghívjuk a függvényt
+}) 
+
