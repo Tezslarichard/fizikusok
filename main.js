@@ -62,7 +62,7 @@ th_row.appendChild(th3) // a th3-t hozzáadjuk a sorhoz
 
 
 
-
+function rendertable(){
 //táblázat létrehozása
 for(let futo of tablazat){ // végigmegyünk a tablazat tömb elemein
     const tr_row = document.createElement('tr') // létrehozunk egy sort
@@ -91,8 +91,6 @@ for(let futo of tablazat){ // végigmegyünk a tablazat tömb elemein
     else{ //ha nincs akkor 
         td3.colSpan= 2 // a td3-nak beállítjuk a colspan értékét 2-re
     }
-
-
-   
-
 }
+}
+rendertable()//meghuvjuk a függvényt
