@@ -113,6 +113,7 @@ form.addEventListener('submit', function(e){// a formra hozzáadunk egy esemény
     const tudosok2 = document.getElementById('tudos2')//a tudos2-t elmentjük egy változóba id alapján
 
 
+    let valid = true // egy változóba elmentjük az igaz értéket
 
     const fizika_terulet_value = fizika_terulet.value // a fizika terület értékét elmentjük egy változóba
     const idoszak_value = idoszak.value // az időszak értékét elmentjük egy változóba
@@ -120,15 +121,42 @@ form.addEventListener('submit', function(e){// a formra hozzáadunk egy esemény
     const tudosok2_value = tudosok2.value    // a tudos2 értékét elmentjük egy változóba
 
 
+    if(fizika_terulet_value === ''){ // ha a fizika terulet értéke üres
+        const parentElement = fizika_terulet.parentElement  //eltaroljuk a teruletet egy valtozoba
+        const error = parentElement.querySelector('.error')  //eltaroljuk az error idval ellatot elemet egy valtozoba
+        if(error != undefined){ // ha talalunk ilyet mezot ami nem undefined
+            error.innerHTML = 'Kötelező mező'// az error tartalmát beállítjuk
+        }
+        valid = false // a valid változót hamisra állítjuk
+    }
 
+    if(idoszak_value === ''){ // ha az idoszak értéke üres
+        const parentElement = idoszak.parentElement//eltaroljuk a teruletet egy valtozoba
+        const error = parentElement.querySelector('.error')  //eltaroljuk az error idval ellatot elemet egy valtozoba
+        if(error != undefined){// ha talalunk ilyet mezot ami nem undefined
+            error.innerHTML = 'Az időszak kötelező mező'// az error tartalmát beállítjuk
+        }
+        valid = false // a valid változót hamisra állítjuk
+    }
+
+    if(tudosok1_value === ''){ // ha a tudos1 értéke üres
+        const parentElement = tudosok1.parentElement //eltaroljuk a teruletet egy valtozoba  
+        const error = parentElement.querySelector('.error')  //eltaroljuk az error idval ellatot elemet egy valtozoba
+        if(error != undefined){// ha talalunk ilyet mezot ami nem undefined
+            error.innerHTML = ' Egy tudós kötelező mező'// az error tartalmát beállítjuk
+        }
+        valid = false // a valid változót hamisra állítjuk
+    }
+  if(valid){
     const uj_tablazat = { // létrehozunk egy objektumot
         fizika : fizika_terulet_value, // a fizika terület értékét elmentjük egy változóba
         ido : idoszak_value, // az időszak értékét elmentjük egy változóba
         tudos1 : tudosok1_value, // a tudos1 értékét elmentjük egy változóba
         tudos2 : tudosok2_value // a tudos2 értékét elmentjük egy változóba
     }
-
     tablazat.push(uj_tablazat) // az uj_tablazatot hozzáadjuk a tablazathoz
     rendertable() // meghívjuk a függvényt
+    }
+    
 }) 
 
