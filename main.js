@@ -155,10 +155,8 @@ function egyszeruvalidate(fizika_teruletinput, idoszakinput, tudosok1input){ // 
          valid = false // a valid változót hamisra állítjuk
     } 
 
-    return valid // a valid változót visszaadjuk
+    return valid // a valid változót visszaadju
 }
-
-
 
 function validateForm(inputhtmlElement, error){ // függvény létrehozása
 let valid = true
