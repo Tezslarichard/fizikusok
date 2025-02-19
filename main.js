@@ -119,19 +119,8 @@ form.addEventListener('submit', function(e){// a formra hozzáadunk egy esemény
         errorhiba.innerHTML = '' // a hiba tartalmát töröljük
     }
 
-    let valid = true // egy változóba elmentjük az igaz értéket
+   if(egyszeruvalidate(fizika_terulet, idoszak, tudosok1)){ // meghívjuk a függvényt
 
-
-   if (!validateForm(fizika_terulet, 'Fizika terület megadása kötelező')) // meghívjuk a függvényt
-    { valid = false } // a valid változót hamisra állítjuk
-    if(!validateForm(idoszak, 'Időszak megadása kötelező') )// meghívjuk a függvényt
-    { valid = false } // a valid változót hamisra állítjuk
-    if(!validateForm(tudosok1, 'Tudós megadása kötelező')) // meghívjuk a függvényt
-    { valid = false } // a valid változót hamisra állítjuk
-  
-  
-  
-    if(valid){ // ha a valid hamis
     const fizika_terulet_value = fizika_terulet.value // a fizika terület értékét elmentjük egy változóba
     const idoszak_value = idoszak.value // az időszak értékét elmentjük egy változóba
     const tudosok1_value = tudosok1.value       // a tudos1 értékét elmentjük egy változóba
@@ -146,8 +135,29 @@ form.addEventListener('submit', function(e){// a formra hozzáadunk egy esemény
     }
     tablazat.push(uj_tablazat) // az uj_tablazatot hozzáadjuk a tablazathoz
     rendertable() // meghívjuk a függvényt
+    forma.reset() // a formot reseteljük
 }
 }) 
+
+function egyszeruvalidate(fizika_teruletinput, idoszakinput, tudosok1input){ // függvény létrehozása
+    let valid = true // egy változóba elmentjük az igaz értéket
+    if (!validateForm(fizika_teruletinput, 'Fizika terület megadása kötelező')) // meghívjuk a függvényt
+    { 
+        valid = false  // a valid változót hamisra állítjuk
+}
+    if(!validateForm(idoszakinput, 'Időszak megadása kötelező') )// meghívjuk a függvényt
+    { 
+        valid = false// a valid változót hamisra állítjuk
+     } 
+
+    if(!validateForm(tudosok1input, 'Tudós megadása kötelező')) // meghívjuk a függvényt
+    {
+         valid = false // a valid változót hamisra állítjuk
+    } 
+
+    return valid // a valid változót visszaadjuk
+}
+
 
 
 function validateForm(inputhtmlElement, error){ // függvény létrehozása
