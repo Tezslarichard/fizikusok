@@ -5,6 +5,38 @@ document.body.appendChild(table) // a tablet hozzáadom a htmlhez
 table.appendChild(thead) // a theadet hozzáadom a tablehez
 table.appendChild(tbody) // a tbodyt hozzáadom a tablehez
 
+const formok = [
+
+    {
+        htmlFor : "fizika", // megadjuk a label1nek az értékét
+        labelText : "Fizika területe", // megadjuk a label1nek az értékét
+        inputType : "text", // megadjuk az input1nek az értékét
+        
+    }
+    ,
+    {
+        htmlFor : "ido", // megadjuk a label2nek az értékét
+        labelText : "Időszak", // megadjuk a label2nek az értékét
+        inputType : "text", // megadjuk az input2nek az értékét
+        
+    }
+    ,
+    {
+        htmlFor : "tudos1", // megadjuk a label3nak az értékét
+        labelText : "Első tudós", // megadjuk a label3nak az értékét
+        inputType : "text", // megadjuk az input3nak az értékét
+        
+    }
+    ,
+    {
+        htmlFor : "tudos2", // megadjuk a label4nek az értékét
+        labelText : "Második tudós", // megadjuk a label4nek az értékét
+        inputType : "text", // megadjuk az input4nek az értékét
+    }  
+
+
+]
+
 const tablazat =[
         {
         fizika :'Optika', // megadjuk a td1nek az értékét
@@ -42,9 +74,9 @@ const tablazat1 = [
 
 fejlecgeneralas(tablazat1) // meghívjuk a függvényt
 rendertable(tablazat)//meghuvjuk a függvényt
+generateform(formok) // meghívjuk a függvényt
 
 
-generateform() // meghívjuk a függvényt
 const form = document.getElementById('form') // a formot elmentjük egy változóba
 
 
