@@ -6,7 +6,7 @@
  */
 function fejlecgeneralas(tablazat1){
     const th_row = document.createElement('tr') // létrehozunk egy sort
-    thead.appendChild(th_row) // a sort hozzáadjuk a theadhez
+    headder.appendChild(th_row) // a sort hozzáadjuk a theadhez
 
     for (const fejlec of tablazat1){ // végigmegyünk a tablazat1 tömb elemein
         const th1 = document.createElement('th') // létrehozunk egy th elemet
@@ -28,10 +28,10 @@ function fejlecgeneralas(tablazat1){
 function rendertable(tablazat){
     //táblázat létrehozása
     
-    tbody.innerHTML= '' // a tbody tartalmát töröljük
+    tbody1.innerHTML= '' // a tbody tartalmát töröljük
     for(let futo of tablazat){ // végigmegyünk a tablazat tömb elemein
         const tr_row = document.createElement('tr') // létrehozunk egy sort
-        tbody.appendChild(tr_row) // a sort hozzáadjuk a tbodyhoz
+        tbody1.appendChild(tr_row) // a sort hozzáadjuk a tbodyhoz
     
         const td1 = document.createElement('td') // létrehozunk egy td elemet
         td1.innerHTML= futo.fizika // megadjuk a td1-nek a tartalmát
@@ -116,9 +116,13 @@ function validateForm(inputhtmlElement, error){ // függvény létrehozása
     form1.id = 'form' // a formnak beállítjuk az id-t
     document.body.appendChild(form1) // a formot hozzáadjuk a bodyhoz
 
-    /**
+/**
+ * 
+ * @param {HTMLElement} formok 
+ * /**
  * ez a függvény generál egy formot ami eddig a htmlbe volt megadom mindegyiknek az id ját stbjét
  */
+ 
 function generateform(formok){
     for(const futogep of formok){
         const div = document.createElement('div') // létrehozunk egy divet

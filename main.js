@@ -5,8 +5,10 @@ document.body.appendChild(table) // a tablet hozzáadom a htmlhez
 table.appendChild(thead) // a theadet hozzáadom a tablehez
 table.appendChild(tbody) // a tbodyt hozzáadom a tablehez
 
-const formok = [
+const tbody1 = tbody //megadom valtozoba
+const headder = thead //megadom valtozoba
 
+const formok = [
     {
         htmlFor : "fizika", // megadjuk a label1nek az értékét
         labelText : "Fizika területe", // megadjuk a label1nek az értékét
@@ -75,7 +77,6 @@ const tablazat1 = [
 fejlecgeneralas(tablazat1) // meghívjuk a függvényt
 rendertable(tablazat)//meghuvjuk a függvényt
 generateform(formok) // meghívjuk a függvényt
-
 
 const form = document.getElementById('form') // a formot elmentjük egy változóba
 
