@@ -12,12 +12,12 @@ function fejlecgeneralas(tablazat1,thead){
         const th1 = document.createElement('th') // létrehozunk egy th elemet
         th1.innerHTML= fejlec // megadjuk a th1-nek a tartalmát
         th_row.appendChild(th1) // a th1-et hozzáadjuk a sorhoz
-    if(fejlec === 'Képviselők'){ // ha a fejlec értéke 'Képviselők'
+    
+        if(fejlec === 'Képviselők'){ // ha a fejlec értéke 'Képviselők'
         th1.colSpan= 2 // a th1-nek beállítjuk a colspan értékét 2-re
 
     }
-}
-}
+}}
 
 /**
  * 
@@ -112,11 +112,9 @@ function validateForm(inputhtmlElement, error){ // függvény létrehozása
     }
     return valid // a valid változót visszaadjuk
     }
-    const form1 = document.createElement('form') // létrehozunk egy formot
-    form1.id = 'form' // a formnak beállítjuk az id-t
-    document.body.appendChild(form1) // a formot hozzáadjuk a bodyhoz
+    
 
-/**
+    /**
  * 
  * @param {HTMLElement} formok 
  * 
@@ -124,6 +122,11 @@ function validateForm(inputhtmlElement, error){ // függvény létrehozása
  */
  
 function generateform(formok){
+    const form1 = document.createElement('form') // létrehozunk egy formot
+    form1.id = 'form' // a formnak beállítjuk az id-t
+    document.body.appendChild(form1) // a formot hozzáadjuk a bodyhoz
+
+
     for(const futogep of formok){
         const div = document.createElement('div') // létrehozunk egy divet
         div.classList.add('field') // a divnek hozzáadjuk a field osztályt

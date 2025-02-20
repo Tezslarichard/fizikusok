@@ -5,8 +5,6 @@ document.body.appendChild(table) // a tablet hozzáadom a htmlhez
 table.appendChild(thead) // a theadet hozzáadom a tablehez
 table.appendChild(tbody) // a tbodyt hozzáadom a tablehez
 
-const tbody1 = tbody //megadom valtozoba
-const headder = thead //megadom valtozoba
 
 const formok = [
     {
@@ -74,8 +72,8 @@ const tablazat1 = [
 
 
 
-fejlecgeneralas(tablazat1) // meghívjuk a függvényt
-rendertable(tablazat)//meghuvjuk a függvényt
+fejlecgeneralas(tablazat1,thead) // meghívjuk a függvényt
+rendertable(tablazat,tbody)//meghuvjuk a függvényt
 generateform(formok) // meghívjuk a függvényt
 
 const form = document.getElementById('form') // a formot elmentjük egy változóba
