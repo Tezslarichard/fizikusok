@@ -4,9 +4,9 @@
  * csinálok egy függvényt ami a tablazat1 tömb elemein végigmegy és létrehoz egy th elemet
  * a th elem tartalmát a tablazat1 tömb elemeivel tölti fel
  */
-function fejlecgeneralas(tablazat1){
+function fejlecgeneralas(tablazat1,thead){
     const th_row = document.createElement('tr') // létrehozunk egy sort
-    headder.appendChild(th_row) // a sort hozzáadjuk a theadhez
+    thead.appendChild(th_row) // a sort hozzáadjuk a theadhez
 
     for (const fejlec of tablazat1){ // végigmegyünk a tablazat1 tömb elemein
         const th1 = document.createElement('th') // létrehozunk egy th elemet
@@ -25,13 +25,13 @@ function fejlecgeneralas(tablazat1){
  * csinálok egy függvényt ami a tablazat1 tömb elemein végigmegy és létrehoz egy th elemet
  * a th elem tartalmát a tablazat1 tömb elemeivel tölti fel
  */
-function rendertable(tablazat){
+function rendertable(tablazat,tbody){
     //táblázat létrehozása
     
-    tbody1.innerHTML= '' // a tbody tartalmát töröljük
+    tbody.innerHTML= '' // a tbody tartalmát töröljük
     for(let futo of tablazat){ // végigmegyünk a tablazat tömb elemein
         const tr_row = document.createElement('tr') // létrehozunk egy sort
-        tbody1.appendChild(tr_row) // a sort hozzáadjuk a tbodyhoz
+        tbody.appendChild(tr_row) // a sort hozzáadjuk a tbodyhoz
     
         const td1 = document.createElement('td') // létrehozunk egy td elemet
         td1.innerHTML= futo.fizika // megadjuk a td1-nek a tartalmát
@@ -119,7 +119,7 @@ function validateForm(inputhtmlElement, error){ // függvény létrehozása
 /**
  * 
  * @param {HTMLElement} formok 
- * /**
+ * 
  * ez a függvény generál egy formot ami eddig a htmlbe volt megadom mindegyiknek az id ját stbjét
  */
  
