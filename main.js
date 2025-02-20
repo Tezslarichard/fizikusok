@@ -111,7 +111,7 @@ form.addEventListener('submit', function(e){// a formra hozzáadunk egy esemény
         tudos2 : tudosok2_value // a tudos2 értékét elmentjük egy változóba
     }
     tablazat.push(uj_tablazat) // az uj_tablazatot hozzáadjuk a tablazathoz
-    rendertable(tablazat) // meghívjuk a függvényt
+    rendertable(tablazat,tbody) // meghívjuk a függvényt
     forma.reset() // a formot reseteljük
 }
 }) 
