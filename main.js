@@ -6,11 +6,6 @@ table.appendChild(thead) // a theadet hozzáadom a tablehez
 table.appendChild(tbody) // a tbodyt hozzáadom a tablehez
 
 
-const tablazat1 = [  {
-    th1_ertek :'Fizika területe', // megadjuk a th1nek az értékét
-    th2_ertek :'Időszak', // megadjuk a th2nek az értékét
-    th3_ertek :'Képviselők'} // megadjuk a th3nak az értékét 
-    ]
 
 
 
@@ -47,18 +42,23 @@ const tablazat =[
 const th_row = document.createElement('tr') // létrehozunk egy sort
 thead.appendChild(th_row) // a sort hozzáadjuk a theadhez
 
-const th1 = document.createElement('th') // létrehozunk egy th elemet
-th1.innerHTML= tablazat1[0].th1_ertek // megadjuk a thnak a tartalmát
-th_row.appendChild(th1) // a th1-et hozzáadjuk a sorhoz
+function fejlecgeneralas(){
+const tablazat1 = [  
+    'Fizika területe', // megadjuk a th1nek az értékét
+    'Időszak', // megadjuk a th2nek az értékét
+    'Képviselők' // megadjuk a th3nak az értékét 
+    ]
 
-const th2 = document.createElement('th') // létrehozunk egy th elemet
-th2.innerHTML= tablazat1[0].th2_ertek // megadjuk a thnak a tartalmát
-th_row.appendChild(th2) // a th2-t hozzáadjuk a sorhoz
+    for (const fejlec of tablazat1){ // végigmegyünk a tablazat1 tömb elemein
+        const th1 = document.createElement('th') // létrehozunk egy th elemet
+        th1.innerHTML= fejlec // megadjuk a th1-nek a tartalmát
+        th_row.appendChild(th1) // a th1-et hozzáadjuk a sorhoz
+    if(fejlec === 'Képviselők'){ // ha a fejlec értéke 'Képviselők'
+        th1.colSpan= 2 // a th1-nek beállítjuk a colspan értékét 2-re
 
-const th3 = document.createElement('th') // létrehozunk egy th elemet
-th3.innerHTML= tablazat1[0].th3_ertek // megadjuk a thnak a tartalmát
-th3.colSpan= 2// a th2-nek beállítjuk a rowspan értékét 2-re
-th_row.appendChild(th3) // a th3-t hozzáadjuk a sorhoz
+    }
+}
+}
 
 
 
@@ -171,3 +171,5 @@ if(inputhtmlElement.value === ''){ // ha az inputhtmlElement értéke üres
 }
 return valid // a valid változót visszaadjuk
 }
+
+fejlecgeneralas() // meghívjuk a függvényt
