@@ -36,18 +36,18 @@ const tablazat =[
            
 
         ]
-
-//fejléc létrehozása
-
-const th_row = document.createElement('tr') // létrehozunk egy sort
-thead.appendChild(th_row) // a sort hozzáadjuk a theadhez
-
-function fejlecgeneralas(){
 const tablazat1 = [  
     'Fizika területe', // megadjuk a th1nek az értékét
     'Időszak', // megadjuk a th2nek az értékét
     'Képviselők' // megadjuk a th3nak az értékét 
     ]
+//fejléc létrehozása
+
+const th_row = document.createElement('tr') // létrehozunk egy sort
+thead.appendChild(th_row) // a sort hozzáadjuk a theadhez
+
+function fejlecgeneralas(tablazat1){
+
 
     for (const fejlec of tablazat1){ // végigmegyünk a tablazat1 tömb elemein
         const th1 = document.createElement('th') // létrehozunk egy th elemet
@@ -61,8 +61,7 @@ const tablazat1 = [
 }
 
 
-
-function rendertable(){
+function rendertable(tablazat){
 //táblázat létrehozása
 
 tbody.innerHTML= '' // a tbody tartalmát töröljük
@@ -95,7 +94,7 @@ for(let futo of tablazat){ // végigmegyünk a tablazat tömb elemein
     }
 }
 }
-rendertable()//meghuvjuk a függvényt
+rendertable(tablazat)//meghuvjuk a függvényt
 
 
 
@@ -134,7 +133,7 @@ form.addEventListener('submit', function(e){// a formra hozzáadunk egy esemény
         tudos2 : tudosok2_value // a tudos2 értékét elmentjük egy változóba
     }
     tablazat.push(uj_tablazat) // az uj_tablazatot hozzáadjuk a tablazathoz
-    rendertable() // meghívjuk a függvényt
+    rendertable(tablazat) // meghívjuk a függvényt
     forma.reset() // a formot reseteljük
 }
 }) 
@@ -172,4 +171,4 @@ if(inputhtmlElement.value === ''){ // ha az inputhtmlElement értéke üres
 return valid // a valid változót visszaadjuk
 }
 
-fejlecgeneralas() // meghívjuk a függvényt
+fejlecgeneralas(tablazat1) // meghívjuk a függvényt
